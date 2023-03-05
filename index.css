@@ -1,0 +1,200 @@
+:root {
+    --btn-radius: 2rem;
+    --btn-shadow: 1px 2px 6px 0px #0c0c0cd9;
+    --clr-btn: #2160e9;
+    --clr-btn-hover: #150ba1;
+    --clr-primary-5: hsl(42, 78%, 60%);
+    --clr-white: #fff;
+    --clr-dark: #1c232e;
+    --clr-red: #ff0000;
+    --font-family: 'Poppins', sans-serif;
+    --font-size: 1.2rem;
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-semi-bold: 700;
+    --font-weight-bold: 800;
+    --spacing: 0.15rem;
+    --transition: all 0.5s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 0.2rem;
+}
+
+.underline {
+    width: 4rem;
+    height: 0.2rem;
+    margin-bottom: 1rem;
+    background: var(--clr-primary-5);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+body {
+    background: var(--clr-white);
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-medium);
+}
+
+/** Homepage **/
+.landing_section {
+    position: relative;
+    min-height: calc(100vh - 4.5rem);
+	width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--clr-white);
+    background-image: url("./images/Data-Cabling.jfif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.sect_info {
+    flex-basis: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.text {
+    background: var(--clr-dark);
+    opacity: 0.8;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.section_title {
+    font-size: 2.2rem;
+}
+
+.sect_info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-left: 2rem;
+}
+
+.sign_up_btn{
+    margin-top: 3rem;
+}
+
+.reg_btn{
+    padding: 0.6rem 1.5rem;
+	border: none;
+	border-radius: var(--btn-radius);
+	background: var(--clr-primary-5);
+    font-size: 1.1rem;
+    color: var(--clr-dark);
+	cursor: pointer;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+.reg_btn:hover{
+	letter-spacing: var(--spacing);
+    border: 1px solid var(--clr-btn-hover);
+}
+
+.section_img img {
+    height: calc(100vh - 4.5rem);
+    width: 100%;
+}
+
+.form_section {
+    position: relative;
+    width: 35%;
+    margin: 3rem auto;
+    margin-top: 5rem;
+    padding: 2rem;
+    background: var(--clr-dark);
+}
+
+/*
+.form_section {
+    height: calc(100vh - 4.2rem);
+    width: 40%;
+    color: var(--clr-dark);
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign_in_up {
+    flex-grow: 0.5;
+}*/
+
+.sign_in_up p {
+    font-weight: var(--font-weight-regular);
+    margin-top: 0.5rem;
+}
+
+.sign_in_up p a {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--clr-btn);
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.sign_in_up p a:hover {
+    color: var(--clr-btn-hover)
+}
+
+.input_grp {
+    display: grid;
+    grid-row-gap: 0.5rem;
+    margin: 1.2rem auto;
+}
+/*
+label {
+    color: var(--clr-primary-5);
+}*/
+
+.asterick {
+    color: #ff0000;
+    font-size: 1.1rem;
+}
+.input_elem {
+    padding: 0.6rem 1rem;
+    background: var(--clr-white);
+    border: none;
+    box-shadow: var(--btn-shadow);
+    border-radius: 0.5rem;
+}
+
+.input_elem:focus {
+    box-shadow: unset;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    box-shadow: var(--btn-shadow);
+    background: var(--clr-btn);
+    font-size: var(--font-size);
+    color: var(--clr-white);
+    border-radius: var(--btn-radius);
+    transition: 1s;
+}
+
+.btn:hover {
+    background: var(--clr-btn-hover);
+}
