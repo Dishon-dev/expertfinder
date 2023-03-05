@@ -1,0 +1,78 @@
+:root {
+    --btn-radius: 2rem;
+    --btn-shadow: 1px 2px 6px 0px #0c0c0cd9;
+    --clr-btn: #2160e9;
+    --clr-btn-hover: #150ba1;
+    --clr-primary-5: hsl(42, 78%, 60%);
+    --clr-white: #fff;
+    --clr-dark: #1c232e;
+    --font-family: 'Poppins', sans-serif;
+    --font-size: 1.2rem;
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-semi-bold: 700;
+    --font-weight-bold: 800;
+}
+
+/** --------------- header ----------------- **/
+.header {
+	width: 100%;
+    background: var(--clr-dark);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	position: sticky;
+} 
+
+nav{
+	display: flex;
+	padding: 1rem;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+}
+.nav-links ul li a{
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+	text-decoration: none;
+	
+}
+
+.nav-links ul li a:hover {
+    color: var(--clr-btn);
+}
+
+.nav-links ul li::after{
+	content: '';
+	width: 0%;
+	height: 0.1rem;
+	background: var(--clr-white);
+	display: block;
+	margin: auto;
+    -webkit-transition: 0.5s;
+	transition: 0.5s;
+} 
+.nav-links ul li:hover::after{
+	width: 100%;
+    background: var(--clr-btn-hover);
+}
+
+@media(max-width: 700px){
+
+.nav-links{
+	  position: absolute;
+	  background: #fff;
+	  height: 88vh;
+	  width: 0;
+	  top: 0vh;
+	  right: 0px;
+	  text-align: left;
+	  z-index: 2;
+	  transition: 1s;
+  }
+	
+}
