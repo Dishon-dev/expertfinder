@@ -1,0 +1,143 @@
+:root {
+    --btn-radius: 2rem;
+    --btn-shadow: 1px 2px 6px 0px #0c0c0cd9;
+    --clr-btn: #2160e9;
+    --clr-btn-hover: #150ba1;
+    --clr-primary-5: hsl(42, 78%, 60%);
+    --clr-white: #fff;
+    --clr-dark: #1c232e;
+    --font-family: 'Poppins', sans-serif;
+    --font-size: 1.2rem;
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-semi-bold: 700;
+    --font-weight-bold: 800;
+    --spacing: 0.15rem;
+    --transition: all 0.5s linear;
+}
+
+/*--------------- footer -----------------*/
+.footer {
+    width: 100;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-dark);
+    color: var(--clr-primary-5);
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.footer ul > li {
+    list-style: none;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+.footer_links ul li a:hover {
+    color: var(--clr-btn);
+}
+
+.footer_links ul li::after{
+	content: '';
+	width: 0%;
+	height: 0.1rem;
+	background: var(--clr-white);
+	display: block;
+	margin: auto;
+    -webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.footer_links ul li:hover::after{
+	width: 100%;
+    background: var(--clr-primary-5);
+}
+
+.socialmedia_links .fab{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right:2rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2;
+    font-size: var(--font-size);
+    background: var(--clr-white);
+    color: var(--clr-dark);
+}
+
+.socialmedia_links .fab:hover{
+	transform: translateY(-10%);
+}
+
+hr {
+    width: 90%;
+    margin: 1rem auto;
+    background: var(--clr-white);
+}
+
+.copyright{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .footer {
+      align-items: flex-start;
+    }
+
+     .footer_links ul {
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+
+    .footer_links ul li {
+        margin-bottom: 1rem;
+    }
+    
+    .footer_links ul li:last-child{
+        margin-bottom: unset;
+    } 
+     
+    .footer_links ul span {
+      display: none;
+    }
+
+    .footer_links ul li::after{
+        display: none;
+    }
+
+    .socialmedia_links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        padding-left: 2rem;
+    }
+
+    .socialmedia_links .fab {
+        margin-bottom: 1rem;
+    }
+  
+    .copyright{
+        align-self: center;
+        font-size: 0.8rem;
+        padding: 0 2rem;
+    }
+  }
